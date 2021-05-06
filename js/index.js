@@ -39,14 +39,14 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 // ----------Header----------
-const navArr = Array.from(document.querySelectorAll('nav > a'))
+const navArr = Array.from(document.querySelectorAll('nav > a'));
 // console.log(navArr)
 
-navArr.forEach((elem, index) => elem.textContent = siteContent["nav"]["nav-item-" + (index + 1)])
+navArr.forEach((elem, index) => elem.textContent = siteContent["nav"]["nav-item-" + (index + 1)]);
 // console.log(navArr)
 
 // const nav1 = document.querySelector('nav > a');
@@ -67,7 +67,25 @@ navArr.forEach((elem, index) => elem.textContent = siteContent["nav"]["nav-item-
 // const nav6 = nav5.nextElementSibling;
 // nav6.textContent = siteContent['nav']['nav-item-6'];
 
-// const newa1 = 
+
+
+
+// -----Why is the code below not working?????? I can't figure it out-----
+
+// const newa1 = document.createElement('a');
+
+// newa1.textContent = "Stuff";
+// newa1.href = "#";
+
+// nav.prepend(newa1);
+
+// const newa2 = document.createElement('a');
+
+// newa2.textContent = "Things";
+// newa2.href = "#";
+
+// nav.appendChild(newa2);
+
 
 
 
