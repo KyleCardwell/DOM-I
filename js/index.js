@@ -41,36 +41,48 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// const navArr = Array.from(document.querySelectorAll('nav > a'))
-// console.log(navArr)
-
-// navArr.forEach(elem => elem.textContent = siteContent["nav"]["nav-item-" & navArr.indexOf(elem)])
-
 
 // ----------Header----------
+const navArr = Array.from(document.querySelectorAll('nav > a'))
+// console.log(navArr)
 
-const nav1 = document.querySelector('nav > a');
-nav1.textContent = siteContent['nav']['nav-item-1'];
+navArr.forEach((elem, index) => elem.textContent = siteContent["nav"]["nav-item-" + (index + 1)])
+// console.log(navArr)
 
-const nav2 = nav1.nextElementSibling;
-nav2.textContent = siteContent['nav']['nav-item-2'];
+// const nav1 = document.querySelector('nav > a');
+// nav1.textContent = siteContent['nav']['nav-item-1'];
 
-const nav3 = nav2.nextElementSibling;
-nav3.textContent = siteContent['nav']['nav-item-3']
+// const nav2 = nav1.nextElementSibling;
+// nav2.textContent = siteContent['nav']['nav-item-2'];
 
-const nav4 = nav3.nextElementSibling;
-nav4.textContent = siteContent['nav']['nav-item-4'];
+// const nav3 = nav2.nextElementSibling;
+// nav3.textContent = siteContent['nav']['nav-item-3']
 
-const nav5 = nav4.nextElementSibling;
-nav5.textContent = siteContent['nav']['nav-item-5'];
+// const nav4 = nav3.nextElementSibling;
+// nav4.textContent = siteContent['nav']['nav-item-4'];
 
-const nav6 = nav5.nextElementSibling;
-nav6.textContent = siteContent['nav']['nav-item-6'];
+// const nav5 = nav4.nextElementSibling;
+// nav5.textContent = siteContent['nav']['nav-item-5'];
+
+// const nav6 = nav5.nextElementSibling;
+// nav6.textContent = siteContent['nav']['nav-item-6'];
+
+// const newa1 = 
+
+
 
 // ----------cta Section----------
 
 const h1Text = document.querySelector('h1');
-h1Text.textContent = siteContent['cta']['h1'];
+let ctah1 = siteContent['cta']['h1'];
+
+let ctah1split = siteContent['cta']['h1'].split(' ');
+// console.log(ctah1split)
+
+let ctah1join = ctah1split.join('\n')
+// console.log(ctah1join)
+
+h1Text.innerText = ctah1join;
 
 const ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
@@ -106,12 +118,16 @@ contentVision.children[1].textContent = siteContent['main-content']['vision-cont
 // ----------contact Section----------
 
 const contacth4 = document.querySelector('.contact > h4');
-console.log(contacth4);
+// console.log(contacth4);
 
 contacth4.textContent = siteContent['contact']['contact-h4'];
 
 const contactp1 = contacth4.nextElementSibling;
-contactp1.textContent = siteContent['contact']['address'];
+
+const address = siteContent['contact']['address'].replace('123 Way 456 Street ','123 Way 456 Street\n');
+// console.log(address);
+
+contactp1.innerText = address;
 
 const contactp2 = contactp1.nextElementSibling;
 contactp2.textContent = siteContent['contact']['phone'];
@@ -123,3 +139,5 @@ contactp3.textContent = siteContent['contact']['email'];
 
 const copyright = document.querySelector('footer > p');
 copyright.textContent = siteContent['footer']['copyright'];
+
+
