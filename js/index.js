@@ -103,3 +103,23 @@ const contentVision = contentProduct.nextElementSibling;
 contentVision.children[0].textContent = siteContent['main-content']['vision-h4'];
 contentVision.children[1].textContent = siteContent['main-content']['vision-content'];
 
+// ----------contact Section----------
+
+const contacth4 = document.querySelector('.contact > h4');
+console.log(contacth4);
+
+contacth4.textContent = siteContent['contact']['contact-h4'];
+
+const contactp1 = contacth4.nextElementSibling;
+contactp1.textContent = siteContent['contact']['address'];
+
+const contactp2 = contactp1.nextElementSibling;
+contactp2.textContent = siteContent['contact']['phone'];
+
+const contactp3 = contactp2.nextElementSibling;
+contactp3.textContent = siteContent['contact']['email'];
+
+// ----------footer----------
+
+const copyright = document.querySelector('footer > p');
+copyright.textContent = siteContent['footer']['copyright'];
