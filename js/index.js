@@ -67,8 +67,14 @@ nav5.textContent = siteContent['nav']['nav-item-5'];
 const nav6 = nav5.nextElementSibling;
 nav6.textContent = siteContent['nav']['nav-item-6'];
 
-// ----------DOM Is Awesome Section----------
-const h1Text = document.querySelector('h1')
-h1Text.textContent = siteContent['cta']['h1']
+// ----------cta Section----------
+const h1Text = document.querySelector('h1');
+h1Text.textContent = siteContent['cta']['h1'];
+
+const ctaButton = document.querySelector('button')
+ctaButton.textContent = siteContent['cta']['button']
+
+const headerImg = document.querySelector("#cta-img");
+headerImg.src = siteContent['cta']['img-src'];
 
 
