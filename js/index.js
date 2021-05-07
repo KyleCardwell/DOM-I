@@ -49,24 +49,39 @@ const navArr = Array.from(document.querySelectorAll('nav > a'));
 navArr.forEach((elem, index) => elem.textContent = siteContent["nav"]["nav-item-" + (index + 1)]);
 // console.log(navArr)
 
-// const nav1 = document.querySelector('nav > a');
-// nav1.textContent = siteContent['nav']['nav-item-1'];
+const nav1 = document.querySelector('a');
+nav1.style.color= "green";
 
-// const nav2 = nav1.nextElementSibling;
-// nav2.textContent = siteContent['nav']['nav-item-2'];
+const nav2 = nav1.nextElementSibling;
+nav2.style.color= "green";
 
-// const nav3 = nav2.nextElementSibling;
-// nav3.textContent = siteContent['nav']['nav-item-3']
+const nav3 = nav2.nextElementSibling;
+nav3.style.color= "green";
 
-// const nav4 = nav3.nextElementSibling;
-// nav4.textContent = siteContent['nav']['nav-item-4'];
+const nav4 = nav3.nextElementSibling;
+nav4.style.color= "green";
 
-// const nav5 = nav4.nextElementSibling;
-// nav5.textContent = siteContent['nav']['nav-item-5'];
+const nav5 = nav4.nextElementSibling;
+nav5.style.color= "green";
 
-// const nav6 = nav5.nextElementSibling;
-// nav6.textContent = siteContent['nav']['nav-item-6'];
+const nav6 = nav5.nextElementSibling;
+nav6.style.color= "green";
 
+
+const navBar = document.querySelector('nav');
+
+const newa1 = document.createElement('a');
+newa1.textContent = "Stuff";
+newa1.href = "#";
+newa1.style.color = "green";
+
+const newa2 = document.createElement('a');
+newa2.textContent = "Things";
+newa2.href = "#";
+newa2.style.color = "green";
+
+navBar.prepend(newa1);
+navBar.appendChild(newa2);
 
 
 
@@ -157,5 +172,3 @@ contactp3.textContent = siteContent['contact']['email'];
 
 const copyright = document.querySelector('footer > p');
 copyright.textContent = siteContent['footer']['copyright'];
-
-
