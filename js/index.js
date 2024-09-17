@@ -39,4 +39,136 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+// ----------Header----------
+const navArr = Array.from(document.querySelectorAll('nav > a'));
+// console.log(navArr)
+
+navArr.forEach((elem, index) => elem.textContent = siteContent["nav"]["nav-item-" + (index + 1)]);
+// console.log(navArr)
+
+const nav1 = document.querySelector('a');
+nav1.style.color= "green";
+
+const nav2 = nav1.nextElementSibling;
+nav2.style.color= "green";
+
+const nav3 = nav2.nextElementSibling;
+nav3.style.color= "green";
+
+const nav4 = nav3.nextElementSibling;
+nav4.style.color= "green";
+
+const nav5 = nav4.nextElementSibling;
+nav5.style.color= "green";
+
+const nav6 = nav5.nextElementSibling;
+nav6.style.color= "green";
+
+
+const navBar = document.querySelector('nav');
+
+const newa1 = document.createElement('a');
+newa1.textContent = "Stuff";
+newa1.href = "#";
+newa1.style.color = "green";
+
+const newa2 = document.createElement('a');
+newa2.textContent = "Things";
+newa2.href = "#";
+newa2.style.color = "green";
+
+navBar.prepend(newa1);
+navBar.appendChild(newa2);
+
+
+
+// -----Why is the code below not working?????? I can't figure it out-----
+
+// const newa1 = document.createElement('a');
+
+// newa1.textContent = "Stuff";
+// newa1.href = "#";
+
+// nav.prepend(newa1);
+
+// const newa2 = document.createElement('a');
+
+// newa2.textContent = "Things";
+// newa2.href = "#";
+
+// nav.appendChild(newa2);
+
+
+
+
+// ----------cta Section----------
+
+const h1Text = document.querySelector('h1');
+let ctah1 = siteContent['cta']['h1'];
+
+let ctah1split = siteContent['cta']['h1'].split(' ');
+// console.log(ctah1split)
+
+let ctah1join = ctah1split.join('\n')
+// console.log(ctah1join)
+
+h1Text.innerText = ctah1join;
+
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button'];
+
+const headerImg = document.querySelector("#cta-img");
+headerImg.src = siteContent['cta']['img-src'];
+
+// ----------main-content Section----------
+
+const contentFeatures = document.querySelector('.top-content > .text-content');
+contentFeatures.children[0].textContent = siteContent['main-content']['features-h4'];
+contentFeatures.children[1].textContent = siteContent['main-content']['features-content'];
+
+const contentAbout = contentFeatures.nextElementSibling;
+contentAbout.children[0].textContent = siteContent['main-content']['about-h4'];
+contentAbout.children[1].textContent = siteContent['main-content']['about-content'];
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+const contentServices = document.querySelector('.bottom-content > .text-content');
+contentServices.children[0].textContent = siteContent['main-content']['services-h4'];
+contentServices.children[1].textContent = siteContent['main-content']['services-content'];
+
+const contentProduct = contentServices.nextElementSibling;
+contentProduct.children[0].textContent = siteContent['main-content']['product-h4'];
+contentProduct.children[1].textContent = siteContent['main-content']['product-content'];
+
+const contentVision = contentProduct.nextElementSibling;
+contentVision.children[0].textContent = siteContent['main-content']['vision-h4'];
+contentVision.children[1].textContent = siteContent['main-content']['vision-content'];
+
+// ----------contact Section----------
+
+const contacth4 = document.querySelector('.contact > h4');
+// console.log(contacth4);
+
+contacth4.textContent = siteContent['contact']['contact-h4'];
+
+const contactp1 = contacth4.nextElementSibling;
+
+const address = siteContent['contact']['address'].replace('123 Way 456 Street ','123 Way 456 Street\n');
+// console.log(address);
+
+contactp1.innerText = address;
+
+const contactp2 = contactp1.nextElementSibling;
+contactp2.textContent = siteContent['contact']['phone'];
+
+const contactp3 = contactp2.nextElementSibling;
+contactp3.textContent = siteContent['contact']['email'];
+
+// ----------footer----------
+
+const copyright = document.querySelector('footer > p');
+copyright.textContent = siteContent['footer']['copyright'];
